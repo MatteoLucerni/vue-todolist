@@ -24,15 +24,27 @@ const app = createApp({
     };
   },
   computed: {
-    isInSearch() {},
+    filteredTasks() {
+      let arr = [...this.tasks];
+      const searchFilter = this.searchFilter.toLowerCase();
+
+      if (searchFilter.length) {
+        arr = this.tasks.filter(task => {
+          const text = task.text.toLowerCase();
+          return text.includes(searchFilter);
+        });
+      }
+
+      return arr;
+    },
   },
   methods: {
     deleteElement(i) {
-      this.tasks.splice(i, 1);
+      this.filteredTasks.splice(i, 1);
     },
     addNewTask() {
       if (!this.newTask) return;
-      this.tasks.push({
+      this.filteredTasks.push({
         text: this.newTask,
         done: false,
       });
