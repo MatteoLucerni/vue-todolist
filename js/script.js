@@ -40,7 +40,7 @@ const app = createApp({
   },
   methods: {
     deleteElement(i) {
-      this.filteredTasks.splice(i, 1);
+      this.tasks.splice(i, 1);
     },
     addNewTask() {
       if (!this.newTask) return;
