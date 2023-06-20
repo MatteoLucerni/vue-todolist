@@ -44,11 +44,12 @@ const app = createApp({
     },
     addNewTask() {
       if (!this.newTask) return;
-      this.filteredTasks.push({
+      this.tasks.push({
         text: this.newTask,
         done: false,
       });
       this.newTask = '';
+      this.searchFilter = '';
     },
   },
 });
