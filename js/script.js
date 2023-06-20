@@ -8,16 +8,16 @@ const app = createApp({
   data() {
     return {
       tasks: [
-        { id: 1, text: 'Completare il report', done: false },
-        { id: 2, text: 'Fare la spesa', done: false },
-        { id: 3, text: 'Chiamare il dentista', done: false },
-        { id: 4, text: 'Preparare la cena', done: false },
-        { id: 5, text: 'Pulire la casa', done: false },
-        { id: 6, text: 'Fare esercizio fisico', done: false },
-        { id: 7, text: 'Leggere un libro', done: false },
-        { id: 8, text: 'Scrivere una lettera', done: false },
-        { id: 9, text: 'Risolvere il problema di matematica', done: false },
-        { id: 10, text: 'Organizzare i documenti', done: false },
+        { text: 'Completare il report', done: false },
+        { text: 'Fare la spesa', done: false },
+        { text: 'Chiamare il dentista', done: false },
+        { text: 'Preparare la cena', done: false },
+        { text: 'Pulire la casa', done: false },
+        { text: 'Fare esercizio fisico', done: false },
+        { text: 'Leggere un libro', done: false },
+        { text: 'Scrivere una lettera', done: false },
+        { text: 'Risolvere il problema di matematica', done: false },
+        { text: 'Organizzare i documenti', done: false },
       ],
     };
   },

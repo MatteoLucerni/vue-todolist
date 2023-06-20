@@ -13,9 +13,9 @@
 <body>
     <div id="root">
         <div class="container my-5 p-5 border border-info">
-            <h1 class="text-center mb-5">TodoList VUE</h1>
+            <h1 class="text-center mb-5 fw-bold text-primary">TodoList VueJs</h1>
             <ul>
-                <li class="fs-3 d-flex justify-content-between align-items-center border px-3 my-3 py-2 rounded" :class="{'text-decoration-line-through': task.done}" v-for="(task, i) in tasks" @click="deleteElement(i)">{{task.text}}<i class="fa-solid fa-xmark btn"></i></li>
+                <li class="fs-3 d-flex justify-content-between align-items-center border px-3 my-3 py-2 rounded" v-for="(task, i) in tasks" @click="task.done = !task.done"><p :class="{'text-decoration-line-through': task.done}">{{task.text}}</p><i @click="deleteElement(i)" class="fa-solid fa-xmark btn"></i></li>
             </ul>
         </div>
     </div>
