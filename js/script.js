@@ -19,11 +19,19 @@ const app = createApp({
         { text: 'Risolvere il problema di matematica', done: false },
         { text: 'Organizzare i documenti', done: false },
       ],
+      newTask: '',
     };
   },
   methods: {
     deleteElement(i) {
       this.tasks.splice(i, 1);
+    },
+    addNewTask() {
+      this.tasks.push({
+        text: this.newTask,
+        done: false,
+      });
+      this.newTask = '';
     },
   },
 });
