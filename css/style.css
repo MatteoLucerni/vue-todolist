@@ -9,3 +9,16 @@ input{
 button{
     width: 80px;
 }
+
+.disappear{
+    animation: disappear 400ms linear;
+}
+
+@keyframes disappear {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}

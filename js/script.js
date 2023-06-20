@@ -21,6 +21,7 @@ const app = createApp({
       ],
       newTask: '',
       searchFilter: '',
+      classAnimation: '',
     };
   },
   computed: {
@@ -40,7 +41,11 @@ const app = createApp({
   },
   methods: {
     deleteElement(i) {
-      this.tasks.splice(i, 1);
+      setTimeout(() => {
+        this.tasks.splice(i, 1);
+        this.classAnimation = '';
+      }, 400);
+      this.classAnimation = 'disappear';
     },
     addNewTask() {
       if (!this.newTask) return;
