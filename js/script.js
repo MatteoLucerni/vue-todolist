@@ -20,13 +20,18 @@ const app = createApp({
         { text: 'Organizzare i documenti', done: false },
       ],
       newTask: '',
+      searchFilter: '',
     };
+  },
+  computed: {
+    isInSearch() {},
   },
   methods: {
     deleteElement(i) {
       this.tasks.splice(i, 1);
     },
     addNewTask() {
+      if (!this.newTask) return;
       this.tasks.push({
         text: this.newTask,
         done: false,
